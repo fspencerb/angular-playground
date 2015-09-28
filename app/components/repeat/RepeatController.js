@@ -16,7 +16,7 @@ function RepeatController(){
   this.name = "My BɼokƏn Cart!";
   
   this.getCartCount = function(){
-    return this.cart.length();
+    return this.cart.length;
     //return the length of our cart
   };
   
@@ -36,6 +36,10 @@ function RepeatController(){
   */ 
   
   this.removeItemFromCart = function(item){
+    
+    var removeArray = this.cart.indexOf(item);
+    this.cart.splice(removeArray, 1);
+      
     //Item gets passed in from our view when the user clicks the x button
     /*
     * This function should be able to remove the passed in item
