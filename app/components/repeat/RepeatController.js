@@ -13,10 +13,14 @@ function RepeatController(){
   };
   //*** No Need to edit anything above this line ****
   
-  this.name = "My BɼokƏn Cart!";
+  this.name = "My Not So BɼokƏn Cart!";
   
   this.getCartCount = function(){
-    return this.cart.length;
+    var runningCount = 0;
+    this.cart.forEach(function(item){
+      runningCount += item.quantity
+    })
+    return runningCount;
     //return the length of our cart
   };
   
